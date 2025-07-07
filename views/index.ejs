@@ -785,46 +785,6 @@ gsap.from(".our-hospital-img", {
   });
 </script>
 
-<script>
-  gsap.registerPlugin(ScrollTrigger);
-
-  gsap.from(".main-header", {
-    y: -100,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: ".main-header",
-      start: "top top",
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  gsap.from(".main-nav .dropdown, .main-nav .nav-link", {
-    opacity: 0,
-    y: 30,
-    stagger: 0.1,
-    delay: 0.2,
-    duration: 0.6,
-    scrollTrigger: {
-      trigger: ".main-header",
-      start: "top top"
-    }
-  });
-
-  gsap.from(".call-buttons .btn", {
-    scale: 0.8,
-    opacity: 0,
-    delay: 0.4,
-    duration: 0.6,
-    stagger: 0.1,
-    scrollTrigger: {
-      trigger: ".main-header",
-      start: "top top"
-    }
-  });
-</script>
-            
 
 <script>
   gsap.registerPlugin(ScrollTrigger);
