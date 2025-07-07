@@ -7,11 +7,6 @@ const nodemailer = require('nodemailer');
 const multer = require('multer');
 const session = require('express-session');
 // const blogRoutes = require('./models/blog');
-const blog = new Blog({
-  title: req.body.title,
-  description: req.body.description, // contains rich HTML
-});
-await blog.save();
 
 
 
