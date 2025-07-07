@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor - Surgenesis Hospital</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/style1.css" />
+  <link rel="stylesheet" href="/css/style2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f7fb;
+      color: #003865;
+      overflow-x: hidden;
+    }
+
+    .doctor-container {
+      display: flex;
+      padding: 40px 20px;
+      background-color: #ffffff;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .doctor-card {
+      flex: 2;
+      margin-right: 30px;
+    }
+
+    .doctor-card img {
+      width: 130px;
+      height: 145px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .doctor-info {
+      margin-left: 24px;
+    }
+
+    .doctor-info h1 {
+      color: #BD1E1E;
+      font-size: 22px;
+      margin: 0 0 10px;
+    }
+
+    .doctor-info h2 {
+      font-size: 16px;
+      font-weight: 400;
+      margin: 4px 0;
+      color: #333;
+    }
+
+    .appointment-section {
+      flex: 1;
+    }
+
+    .booknow {
+      background-color: #BD1E1E;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .popup {
+      display: none;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-text {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-text[type="submit"] {
+      background-color: #003865;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+
+    .form-text[type="submit"]:hover {
+      background-color: #BD1E1E;
+    }
+
+    .about-section {
+      margin-top: 30px;
+    }
+
+    .about-section h2 {
+      font-weight: 500;
+      font-size: 20px;
+      color: #003865;
+    }
+
+    .about-section a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .about-section p {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <%- include("partial/header") %>
+
+  <div class="doctor-container">
+    <div class="doctor-card">
+      <div style="display: flex; align-items: flex-start;">
+        <img src="/images/dd2.jpg" alt="Dr. Vivek Mittal">
+        <div class="doctor-info" style="display: flex;flex-direction:row">
+          <div style="line-height: 28px;"><h1>Dr. Vivek Mittal</h1>
+          <h2 style="display:flex;flex:inline-left;">Senior Consultant</h2>
+          <h2 style="display:flex;flex:inline-left;"><strong>Department:</strong>&thinsp;Critical Care Specialist</h2>
+          <h2 style="display:flex;flex:inline-left;"><strong>Experience:</strong>&thinsp; 22 Years</h2></div>
+          <div style="display: flex;flex-direction:column; padding-left:70px"><p style="margin-top: 10px;margin-bottom:6px"><i class="fa-solid fa-phone" style="color:#BD1E1E; margin-right: 10px;"></i><strong>For Appointment</strong></p><p style="padding-left:26px; margin:5px 0;">9079888679</p></div>
+        </div>
+      </div>
+
+      <div class="about-section">
+        <h2>About Dr. <a href="https://www.google.com/search?q=dr.+amit+mittal+on+google" target="_blank" style="background-color: transparent;">Dr. Vivek Mittal</a></h2>
+        <p>Dr. Amit Mittal is an orthopedic and hand surgeon practicing in Jaipur, Rajasthan. He is known for his <strong>expertise</strong> in hand and <strong>microsurgery</strong>, including treatment of brachial plexus injuries, congenital anomalies, and spastic hand management. He is associated with <strong>Surgenesis Hospital</strong> and Mittal Hand Microsurgery Centre in Jaipur.</p>
+        <p>He has managed major degloving injuries of upper and lower limb including pediatric patient successfully. He got <strong>2nd rank in Diplomat National</strong> board in Hand and Microsurgery-2012 [DNB-FNB].</p>
+      </div>
+    <div class="multi-select-box" style="display: inline-block;">
+      <input type="checkbox" id="check5" style="display: none;">
+      <div  style="width: 750px;height:22px;border:solid 1px green ; padding-left:22px; border-radius:7px ;padding-top:7px; display:flex; justify-content:space-between" >
+        <label for="check5" onclick="toggleDropdown5()" style="cursor: pointer; color: #003865;">
+          Education<i class="fas fa-chevron-down" style="font-size: 12px; padding-left:660px;"></i>
+        </label>
+      </div>
+      <div class="dropdown-options1" id="dropdown" style="  background-color: #9e8585; border: 1px solid #436d94;width:753px; position:relative;box-shadow:0;">
+        <div class="option1">MBBS</div>
+        <div class="option1"></div>
+      </div>
+    </div>
+    </div>
+
+    <div class="appointment-section">
+      <button onclick="togglePopup3()" class="booknow"><a href="/contact" style="background-color: transparent; text-decoration:none">Book an Appointment <i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i></a></button>
+    </div>
+  </div>
+
+
+
+  <%- include("partial/footer") %>
+
+  <script>
+    function togglePopup3() {
+      const popup = document.getElementById('popupForm');
+      popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+
+
+
+<script>
+
+
+ /* Selection bar  */
+function toggleDropdown1(){
+  const dropdown = document.getElementById('dropdown');
+  const check =document.getElementById('check2');
+
+
+window.onclick = function (e) {
+  if (!e.target.closest('.multi-select-box')) {
+    check.checked=false
+  }
+}};
+
+function toggleDropdown3(){
+  const dropdown = document.getElementById('dropdown');
+  const check =document.getElementById('check4');
+
+
+window.onclick = function (e) {
+  if (!e.target.closest('.multi-select-box')) {
+    check.checked=false
+  }
+}};
+
+function toggleDropdown2(){
+  const dropdown = document.getElementById('dropdown');
+  const check =document.getElementById('check3');
+
+
+window.onclick = function (e) {
+  if (!e.target.closest('.multi-select-box')) {
+    check.checked=false
+  }
+}};
+
+
+function toggleDropdown5(){
+  const dropdown = document.getElementById('dropdown');
+  const check =document.getElementById('check5');
+
+
+window.onclick = function (e) {
+  if (!e.target.closest('.multi-select-box')) {
+    check.checked=false
+  }
+}};
+
+  
+
+</script>
+
+</body>
+
+</html>

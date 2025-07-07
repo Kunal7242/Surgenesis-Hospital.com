@@ -1,0 +1,78 @@
+@media screen and (max-width: 904px) {
+    .toggle{
+        display: block;
+    }
+    .nav-bar{
+        display: none;
+    }
+    .nav-bar-div{
+        display: none;
+    }
+    .popup-box{
+        width: 60%;
+        max-width: 250px;
+        /* margin-left: 260px; */
+        margin-top: 90px;
+    }
+    .popup-overlay{
+        justify-content: center;
+        width: 100%;
+    }
+    .popup-box h2{
+        font-size: 20;
+      
+    }
+    #naam{
+        font-size: 15px;
+    }
+    #mob{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+  .svc-card-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .svc-card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:689) {
+  .doctors-wrapper{
+    padding: 0;
+    margin: 0;
+  }
+  .dr-detail{
+    margin: 0;
+  }
+}
+
+@media (max-width: 683px) {
+
+
+  .btn-display {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bt1 {
+    width: 100%;
+  }
+}
+@media screen and (max-width:768px){
+  .hero-banner-image{
+    position: absolute;
+      left: 10px;
+      top: 400px;
+      transform: rotate(22deg);
+      
+  }
+  .hero-banner-image img{
+    width: 120px;
+    left: 12px;
+  }
+}

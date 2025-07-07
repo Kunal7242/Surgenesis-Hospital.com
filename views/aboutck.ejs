@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Surgenesis Hospital</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    
+    .about-hero {
+      background: #002d5e;
+      max-height: 352.06px;
+      max-width: 1440px;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .about-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .about-section h2 {
+      color: #003057;
+      margin-bottom: 20px;
+      font-size: 29px;
+    }
+
+    .about-section p {
+      line-height: 1.8;
+      color: #444;
+      font-size: 18px;
+    }
+
+    .highlight-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .highlight-box {
+      background-color: #f3f3f3;
+      border-left: 5px solid #bd1e1e;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .highlight-box h4 {
+      margin-bottom: 10px;
+      color: #003057;
+    }
+
+    .highlight-box p {
+      margin: 0;
+    }
+
+
+    .hero-banner-image{
+      max-width: 250px;
+     
+    }
+      .hero-banner-image{
+      max-width: 240px;
+      height: auto;
+       max-height: 240px;
+      top: 200px;
+      left: 110px;
+      transform: rotate(10deg);
+      position: absolute;
+
+    }
+    .hero-banner-image img{
+      border: #00042b solid 5px;
+    }
+    .ortho-banner-heading{
+      width: 80%;
+    }
+        .ortho-banner-style{
+      display: flex;
+      flex-direction:row-reverse ;
+    }
+    body{
+    font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+
+<body style="font-family: poppins ;overflow-x:hidden">
+  <%- include('partial/header') %>
+
+  <section class="about-hero">
+     <div class="ortho-banner-style">
+     <div class="ortho-banner-heading">
+    <h1 style="color: white; font-size: 42px;">About <p style="color:#bd1e1e; display:inline">Surgenesis</p> Hospital</h1>
+    <p style="color: #fffff0;font-size:18px">Redefining healthcare with innovation, compassion, and excellence.</p>
+    </div>
+    <div class="hero-banner-image">
+    <img src="/images/ortho-img2.jpg" alt="Hero Visual" />
+    </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2><i style="color: #bd1e1e;" class="fa-solid fa-house-chimney-medical"></i>Welcome to Surgenesis Hospital</h2>
+    <p>At Surgenesis Hospital, we are committed to delivering world-class healthcare services that combine advanced medical technology, expert doctors, and a compassionate care environment. Our team of specialists, nurses, and support staff strive relentlessly to provide the highest standard of treatment, ensuring a holistic healing journey for every patient.</p>
+
+    <p>With a patient-first philosophy, our hospital features a range of departments including Orthopedics, Hand Microsurgery, Plastic Surgery, Cardiology, and more. Each department is equipped with state-of-the-art infrastructure to offer accurate diagnosis, effective treatment, and swift recovery.</p>
+
+    <div class="highlight-boxes">
+      <div class="highlight-box">
+        <h4 style="font-size: 22px;margin-top:5px"><i class="fas fa-hospital"></i> Modern Infrastructure</h4>
+        <p>Our hospital boasts modern operation theatres, ICUs, and diagnostic labs built to international standards.</p>
+      </div>
+
+      <div class="highlight-box">
+        <h4 style="font-size: 22px;margin-top:5px;"><i style="font-family: Font Awesome 6 Free;" class="fas fa-user-md"></i> Expert Doctors</h4>
+        <p>Our multidisciplinary team of experienced doctors ensures personalized treatment for every individual.</p>
+      </div>
+
+      <div class="highlight-box">
+        <h4 style="font-size: 22px;margin-top:5px"><i class="fas fa-hand-holding-heart"></i> Patient-Centric Care</h4>
+        <p>We emphasize empathy, transparency, and comfort at every step of your treatment journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partial/footer') %>
+
+
+
+  <script>
+
+
+ /* Selection bar  */
+function toggleDropdown1(){
+  const dropdown = document.getElementById('dropdown');
+  const check =document.getElementById('check2');
+
+
+window.onclick = function (e) {
+  if (!e.target.closest('.multi-select-box')) {
+    check.checked=false
+  }
+}};
+
+function toggleDropdown3(){
+  const dropdown = document.getElementById('dropdown');
+  const check =document.getElementById('check4');
+
+
+window.onclick = function (e) {
+  if (!e.target.closest('.multi-select-box')) {
+    check.checked=false
+  }
+}};
+
+function toggleDropdown2(){
+  const dropdown = document.getElementById('dropdown');
+  const check =document.getElementById('check3');
+
+
+window.onclick = function (e) {
+  if (!e.target.closest('.multi-select-box')) {
+    check.checked=false
+  }
+}};
+
+
+function toggleDropdown5(){
+  const dropdown = document.getElementById('dropdown');
+  const check =document.getElementById('check5');
+
+
+window.onclick = function (e) {
+  if (!e.target.closest('.multi-select-box')) {
+    check.checked=false
+  }
+}};
+
+</script>
+
+</body>
+
+
+
+</html>

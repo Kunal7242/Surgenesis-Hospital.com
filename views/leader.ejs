@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leadership | Surgenesis Hospital</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- <link rel="stylesheet" href="/css/style2.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<style>
+     .leadership-section {
+  position: relative;
+  padding: 80px 20px;
+  background-color: #f1f5f9;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.leadership-section::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -60px;
+  width: 200%;
+  height: 33%;
+  background-color: #BD1E1E;
+  transform: rotate(-4deg);
+  z-index: -1;
+  border-radius: 50%;
+}
+.leadership-section::after{
+   content: "";
+  position: absolute;
+  top: 5px;
+  left: -60px;
+  width: 200%;
+  height: 33%;
+  background-color: #003865;
+  transform: rotate(4deg);
+  z-index: -1;
+  border-radius: 50%;
+
+}
+
+.leadership-heading::before {
+  content: "";
+  position: absolute;
+  top: 1000px;
+  left:  -60px;
+  width: 100%;
+  height: 20%;
+  background-color: #ffadad;
+  transform: rotate(-4deg);
+  z-index: -1;
+  border-radius: 60%;
+
+}
+.leadership-heading::after{
+   content: "";
+  position: absolute;
+  top: 535px;
+  left: -60px;
+  width: 100%;
+  height: 33%;
+  background-color: #daedfd;
+  transform: rotate(4deg);
+  z-index: -1;
+  border-radius: 60%;
+  
+
+}
+
+.leadership-heading {
+  text-align: center;
+  color: white;
+  margin-bottom: 60px;
+}
+
+.leadership-heading h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.leadership-heading p {
+  color: #dbe7f3;
+  font-size: 16px;
+}
+
+.leadership-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.leader-box {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.leader-box.reverse {
+  flex-direction: row-reverse;
+}
+
+.leader-image img {
+  width: 220px;
+  object-fit: cover;
+  border-radius:10px;
+
+}
+
+.leader-content {
+  flex: 1;
+}
+
+.leader-content h3 {
+  color: #003865;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.leader-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.leader-content i {
+  color: #BD1E1E;
+  font-size: 16px;
+  margin: 0 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .leader-box,
+  .leader-box.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leader-image img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .leader-content h3 {
+    font-size: 20px;
+  }
+
+  .leader-content p {
+    font-size: 15px;
+  }
+}
+
+</style>
+<body>
+      <%- include("partial/header") %>
+ <section class="leadership-section">
+  <div class="leadership-heading">
+    <h2 style="color: white;">Leadership Message</h2>
+    <p>Hear directly from the minds shaping Surgenesis Hospital's mission and care philosophy.</p>
+  </div>
+
+  <div class="leadership-container">
+    <div class="leader-box">
+      <div class="leader-image">
+        <img src="/images/dd1.jpg" alt="Dr. Amit Mittal">
+      </div>
+      <div class="leader-content">
+        <h3>Dr. Amit Mittal</h3>
+        <p><i class="fas fa-quote-left"></i> At Surgenesis, our mission is clear — to provide accessible, compassionate, and world-class care. We believe in treating not just the condition but the person. Every patient’s journey matters to us.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non vero laudantium eius molestias mollitia, illum odio rerum neque ex tenetur. Recusandae quisquam delectus aliquam possimus placeat doloremque debitis, expedita, ullam assumenda dolor nemo, eaque iure itaque eos maiores quaerat veritatis quasi repellat omnis quod ipsam reprehenderit cumque. Quaerat fugiat dolorum hic quia repudiandae, error facilis quasi quisquam placeat, doloribus illo voluptatibus officiis debitis adipisci commodi perferendis minus saepe sequi? Distinctio labore autem dolorem voluptate molestiae? Totam quaerat consequatur ea. Blanditiis maxime quisquam delectus voluptate ea optio sit cumque, enim, quis repellendus officiis architecto molestiae labore dignissimos? Minima voluptatum nihil explicabo! <i class="fas fa-quote-right"></i></p>
+      </div>
+    </div>
+
+    <div class="leader-box reverse">
+      <div class="leader-image">
+        <img src="/images/dd2.jpg" alt="Dr. Vivek Mittal">
+      </div>
+      <div class="leader-content">
+        <h3>Dr. Vivek Mittal</h3>
+        <p><i class="fas fa-quote-left"></i> Our vision is to foster trust through excellence. We blend advanced medical innovation with personalized care, ensuring every patient receives not just treatment, but healing. </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non aliquam minus hic labore incidunt necessitatibus molestias tempore ut quidem illum perferendis magni assumenda eaque repellendus sed similique, veniam sapiente nihil vero odio eos. Autem eligendi tenetur incidunt, sapiente provident libero itaque et culpa asperiores praesentium velit nam unde veniam mollitia eius illum hic dicta? Beatae dolor aspernatur iste impedit voluptates, alias, blanditiis odio quae cupiditate nemo voluptatibus rerum maxime odit nobis porro quia animi magnam reiciendis. Blanditiis, maiores at laboriosam velit magnam assumenda repellendus dolor ex vero corporis, voluptates voluptatem consectetur aspernatur voluptate dicta incidunt eius molestias facilis accusamus mollitia?<i class="fas fa-quote-right"></i></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <%- include("partial/footer") %>
+
+</body>
+</html>

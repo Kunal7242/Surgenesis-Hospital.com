@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surgenesis Blog Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    .blog-card1 img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.blog-content1 h3 {
+  color: #003865;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.blog-content1 {
+  padding: 15px;
+  color: #333;
+}
+.blog-card1 {
+  background-color: #eeeffd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+}
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      overflow-x: hidden;
+    }
+    .blog-container1 {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      position: relative;
+    }
+    .blog-container1::before,
+    .blog-container1::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.06;
+      z-index: 0;
+    }
+    .blog-container1::before {
+      top: -80px;
+      left: -100px;
+      width: 300px;
+      height: 300px;
+      background-color: #003B75;
+    }
+    .blog-container1::after {
+      bottom: -100px;
+      right: -80px;
+      width: 250px;
+      height: 250px;
+      background-color: #FF4D58;
+    }
+    h2 {
+      text-align: center;
+      color: #003865;
+      margin-bottom: 30px;
+    }
+    .blog-list1 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .blog-card1 {
+      background: #f6f8fa;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: calc(33.33% - 20px);
+      transition: 0.3s ease;
+      position: relative;
+    }
+    .blog-card1:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+    .blog-card1 h3 {
+      color: #003B75;
+      margin-bottom: 10px;
+    }
+    .blog-card1 p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    .blog-card1 img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .blog-card1 form button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ff4d4d;
+      border: none;
+      color: white;
+      border-radius: 50%;
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+    }
+    .add-blog-form1 {
+      margin-top: 40px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .add-blog-form1 input,
+    .add-blog-form1 textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    .add-blog-form1 button {
+      background: #003B75;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .blog-card1 {
+        width: 100%;
+      }
+    }
+
+
+.form-blog{
+  display: flex;
+  flex-direction: row;
+  gap:0px;
+  
+}
+.blog-card1{
+  width: 25%;
+}
+.blog-container1{
+  margin-left: 3%;
+}
+
+
+  </style>
+</head>
+<body>
+ <%- include("partial/header") %>
+
+
+  <div class="blog-container1">
+  <h2 class="blog-header1">Doctor's Blog</h2>
+<div class="form-blog">
+  <div class="blog-list1">
+    <% allBlogPosts.forEach(post => { %>
+      <div class="blog-card1">
+        <img src="<%= post.image %>" alt="Blog image">
+        <h3><%= post.title %></h3>
+        <p><%= post.summary %></p>
+        <a href="/blogpage/view/<%= post._id %>" style="text-decoration:none; color:#bd1e1e" >Read More</a>
+        <% if (user && user.role === 'doctor') { %>
+          <form action="/blogpage/delete/<%= post._id %>" method="POST">
+            <button type="submit">&times;</button>
+          </form>
+        <% } %>
+      </div>
+    <% }) %>
+  </div>
+
+  <% if (user && user.role === 'doctor') { %>
+    <form class="add-blog-form1" action="/blogpage/add" method="POST" enctype="multipart/form-data">
+      <input type="text" name="title" placeholder="Title" required>
+      <input type="text" name="summary" placeholder="Short Summary" required>
+      <input type="file" name="image" accept="image/*" required>
+      <textarea name="description" rows="6" placeholder="Full Blog Content" required></textarea>
+      <button type="submit">Add Blog</button>
+    </form>
+  <% } %>
+  
+</div>
+
+
+</div>
+
+<div id="doctorLoginPopup" class="popup-form-overlay" style="display: none;">
+    <div class="popup-form-box">
+      <span class="close-popup" onclick="toggleDoctorLoginPopup()">&times;</span>
+      <form action="/login" method="POST">
+        <input type="text" name="username" placeholder="Doctor Name" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+ 
+
+<button id="showDoctorLogin" class="corner-login-button">👨‍⚕️ Doctor Login</button>
+   <% if (user && user.role === 'doctor') { %>
+  <a href="/logout" class="logout-btn">Logout</a>
+<% } %>
+ <%- include("partial/footer") %>
+
+
+
+<script>
+  // Show/Hide Doctor Login Popup
+  function toggleDoctorLoginPopup() {
+    const popup = document.getElementById('doctorLoginPopup');
+    popup.style.display = (popup.style.display === 'flex' || popup.style.display === '') ? 'none' : 'flex';
+  }
+
+  // Attach to the login button
+  document.getElementById('showDoctorLogin').addEventListener('click', toggleDoctorLoginPopup);
+</script>
+<script>
+
+
+</script>
+
+<script> 
+let currentSlide = 0;
+const blogSliderr = document.getElementById('blogSlider');
+const blogCards = document.querySelectorAll('.blog-card');
+const totalSlides = blogCards.length;
+
+function moveBlogSlide(direction) {
+  currentSlide += direction;
+  if (currentSlide < 0) currentSlide = totalSlides - 3;
+  if (currentSlide > totalSlides - 3) currentSlide = 0;
+  blogSliderr.style.transform = `translateX(-${currentSlide * (100 / 3)}%)`;
+}
+
+setInterval(() => moveBlogSlide(1), 4000);
+</script>
+
+
+<script>
+  // Toast function
+  function showToast(message) {
+    const toast = document.createElement('div');
+    toast.innerText = message;
+    toast.style.position = 'fixed';
+    toast.style.bottom = '20px';
+    toast.style.right = '20px';
+    toast.style.background = '#003865'; // Main color (60%)
+    toast.style.color = 'white';
+    toast.style.padding = '12px 20px';
+    toast.style.borderRadius = '8px';
+    toast.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+    toast.style.fontSize = '14px';
+    toast.style.zIndex = '9999';
+    toast.style.opacity = '0';
+    toast.style.transition = 'opacity 0.3s ease-in-out';
+
+    document.body.appendChild(toast);
+
+    setTimeout(() => toast.style.opacity = '1', 100); // Fade in
+    setTimeout(() => {
+      toast.style.opacity = '0'; // Fade out
+      setTimeout(() => toast.remove(), 300);
+    }, 3000);
+  }
+</script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>o -->
+
+<script>
+  const msg = "<%= typeof msg !== 'undefined' ? msg : '' %>";
+  if (msg === "added") showToast("Blog added successfully!");
+  else if (msg === "deleted") showToast("Blog deleted successfully!");
+</script>
+
+
+
+
+<script>
+  let currentBlogIdx = 0;
+  const docSlider = document.getElementById('docBlogSlider');
+  const docCards = document.querySelectorAll('.doc-blog-card');
+  const maxSlide = docCards.length - 3;
+
+  function shiftBlogSlide(dir) {
+    currentBlogIdx += dir;
+    if (currentBlogIdx < 0) currentBlogIdx = maxSlide;
+    if (currentBlogIdx > maxSlide) currentBlogIdx = 0;
+    docSlider.style.transform = `translateX(-${currentBlogIdx * (100 / 3)}%)`;
+  }
+
+  setInterval(() => shiftBlogSlide(1), 4000);
+
+  function togglePopupForm() {
+    const popup = document.getElementById('popupFormOverlay');
+    popup.style.display = popup.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  const statusMsg = "<%= typeof notify !== 'undefined' ? notify : '' %>";
+  if (statusMsg === "added") showToast("Blog successfully added!");
+  else if (statusMsg === "deleted") showToast("Blog successfully deleted!");
+  
+  
+  
+  
+  
+  function toggleDoctorPopup() {
+  const popup = document.getElementById("doctorAuthPopup");
+  popup.style.display = popup.style.display === "flex" ? "none" : "flex";
+}
+</script>
+
+
+
+
+
+<!-- TinyMCE Script with your API key -->
+<script src="https://cdn.tiny.cloud/1/2eg3tu8xiym7f55z0wwv3zjr8vdhnufrjrtekvpt0eunpeio/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+<!-- TinyMCE Init + triggerSave -->
+document.addEventListener("DOMContentLoaded", function () {
+  tinymce.init({
+    selector: 'textarea.rich-editor',
+    height: 300,
+    menubar: false,
+    plugins: 'lists link',
+    toolbar: 'undo redo | bold italic underline | bullist numlist | link',
+    content_style: "body { font-family:Arial; font-size:14px }"
+  });
+
+  const blogForm = document.getElementById("blogForm");
+  if (blogForm) {
+    blogForm.addEventListener("submit", function (e) {
+      console.log("Form is submitting...");
+      tinymce.triggerSave(); // Sync editor content
+    });
+  }
+});</script>
+<script>
+  function togglePopupForm() {
+    const popup = document.getElementById("popupFormOverlay");
+    if (popup.style.display === "block") {
+      popup.style.display = "none";
+    } else {
+      popup.style.display = "block";
+    }
+  }
+</script>
+
+<script>
+  let blogIndex = 0;
+
+  function shiftBlogSlide(direction) {
+    const slider = document.getElementById('docBlogSlider');
+    const cards = slider.querySelectorAll('.doc-blog-card');
+    const totalCards = cards.length;
+
+    const screenWidth = window.innerWidth;
+    const cardsPerView = screenWidth <= 600 ? 1 : screenWidth <= 992 ? 2 : 3;
+    const cardWidth = cards[0].offsetWidth + 20;
+
+    blogIndex += direction;
+
+    if (blogIndex > totalCards - cardsPerView) {
+      blogIndex = 0;
+    } else if (blogIndex < 0) {
+      blogIndex = totalCards - cardsPerView;
+    }
+
+    slider.style.transform = `translateX(-${blogIndex * cardWidth}px)`;
+  }
+
+  window.addEventListener('resize', () => shiftBlogSlide(0));
+</script>
+
+<script>
+  function toggleMobileNav() {
+    const panel = document.getElementById('mobileNav');
+    panel.classList.toggle('active');
+  }
+
+  function toggleDropdown(trigger) {
+    trigger.parentElement.classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>

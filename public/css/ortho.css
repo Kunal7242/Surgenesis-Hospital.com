@@ -1,0 +1,349 @@
+
+
+    .ortho-banner {
+      background: #002d5e;
+      text-align: center;
+      padding: 100px 20px 60px;
+      position: relative;
+    }
+
+    .ortho-banner::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background:#002d5e ;
+      border-radius: 2px;
+    }
+
+    .ortho-banner h1 {
+      font-size: 2.8rem;
+      color: white;
+    }
+
+    .ortho-banner p {
+      font-size: 1.1rem;
+      color: white;
+      max-width: 600px;
+      margin: 10px auto 30px;
+    }
+
+    .cta-button {
+      background: #bd1e1e;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #005f91;
+    }
+
+    .ortho-about,
+    .ortho-why,
+    .ortho-cards-section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .ortho-about h2::before {
+      content: "\f0f1";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      margin-right: 10px;
+      color: #bd1e1e;
+    }
+
+    .ortho-cards-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .ortho-card {
+      background: white;
+      width: 300px;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      border: 1px solid #dce3ec;
+    }
+
+    .ortho-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .sgns-testimonial-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .ortho-card h3 {
+      padding: 16px 20px 0;
+      font-size: 1.3rem;
+      color: #002d5e;
+    }
+
+    .ortho-card p {
+      padding: 10px 20px 20px;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .ortho-why ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .ortho-why li {
+      margin-bottom: 14px;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      color: #003865;
+    }
+
+    .sgns-testimonial-card i {
+      color: #bd1e1e;
+      margin-right: 12px;
+      /* margin-left: 400px; */
+    }
+
+    .ortho-footer-cta {
+      text-align: center;
+      background: #e6f1f8;
+      color: #003865;
+      padding: 60px 20px;
+      position: relative;
+    }
+
+    .ortho-footer-cta::before {
+      content: url('/images/phone-icon.svg');
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.08;
+    }
+
+    .treat{
+      display: flex;
+      flex-direction: column;
+    }
+    .treat-img{
+      width: 60%;
+    }
+    .treat h2{
+      font-size: 29px;
+    }
+    .treat p{
+      font-size: 19px;
+    }
+    .treat-img img{
+      max-width: 260px;
+    }
+
+    .treat-wrap{
+      display: flex;
+      flex-direction: row;
+      padding-left: 84px;
+      gap: 20px;
+    }
+    .ortho-banner-style{
+      display: flex;
+      flex-direction:row-reverse ;
+    }
+    .ortho-banner-heading{
+      width: 80%;
+    }
+    .hero-banner-image{
+      max-width: 250px;
+     
+    }
+      .hero-banner-image{
+     
+      height: auto;
+       
+      top: 150px;
+      left: 110px;
+      transform: rotate(10deg);
+      position: absolute;
+
+    }
+    .hero-banner-image img{
+      max-height: 240px;
+      max-width: 240px;
+      border:  #00042b solid 5px;
+    }
+
+  .hero-banner {
+    background: linear-gradient(135deg, #f0f8ff, #ffffff);
+    padding: 40px 20px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-banner::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: #0072CE;
+    opacity: 0.07;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  .hero-banner::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: #E30613;
+    opacity: 0.05;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  .ortho-about::after{
+       content: "";
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: #E30613;
+    opacity: 0.05;
+    border-radius: 50%;
+    z-index: 0;
+  }
+  .ortho-about::before{
+     content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: #0072CE;
+    opacity: 0.07;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  .hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .hero-banner-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-banner-text {
+    flex: 1 1 500px;
+    padding-right: 20px;
+  }
+
+  .hero-banner-text h1 {
+    font-size: 2.5rem;
+    color: #003865;
+    margin-bottom: 20px;
+  }
+
+  .hero-banner-text p {
+    font-size: 1.1rem;
+    color: #4d4d4d;
+    margin-bottom: 30px;
+  }
+
+  .hero-banner-actions a {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 12px 24px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+  }
+
+  .hero-cta {
+    background: #bd1e1e;
+    color: white;
+    margin-left: 30px;
+    border: solid 0.5px rgba(227, 6, 19, 0.9);
+  }
+
+  .hero-cta:hover {
+    background: white;
+    color: #2d4165;
+    border: #2d4165 solid 0.5px;
+  }
+
+  .hero-learn {
+    background: rgba(227, 6, 19, 0.8);
+    color: white;
+  }
+
+  .hero-learn:hover {
+    background: rgba(176, 0, 16, 0.9);
+  }
+
+  .hero-banner-imagee {
+    flex: 1 1 400px;
+    text-align: center;
+  }
+
+  .hero-banner-imagee img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    .hero-banner-content {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    .hero-banner-text {
+      padding-right: 0;
+    }
+
+    .hero-banner-text h1 {
+      font-size: 1.8rem;
+    }
+
+    .hero-banner-text p {
+      font-size: 1rem;
+    }
+
+    .hero-banner-actions a {
+      margin: 10px 5px;
+    }
+  }
+

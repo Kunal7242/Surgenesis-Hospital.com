@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patient Testimonials | Surgenesis Hospital</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    .testimonial-video-page {
+      padding: 60px 30px;
+      background-color: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .testimonial-video-title {
+      font-size: 2.5rem;
+      text-align: center;
+      color: #003865;
+      margin-bottom: 50px;
+    }
+
+    .testimonial-video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial-video-card {
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .testimonial-video-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonial-video-frame {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+
+    .testimonial-video-text {
+      padding: 20px;
+    }
+
+    .testimonial-video-heading {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #003865;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-video-description {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 500px) {
+      .testimonial-video-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <%- include("partial/header") %>
+
+  <section class="testimonial-video-page">
+    <h2 class="testimonial-video-title">Patient Testimonials</h2>
+
+    <div class="testimonial-video-grid">
+
+      <!-- Video Card 1 -->
+      <div class="testimonial-video-card">
+        <iframe class="testimonial-video-frame" src="https://www.youtube.com/embed/75o2_ciM0Bk?si=6QEc6JlN0xp6-mDp" allowfullscreen></iframe>
+        <div class="testimonial-video-text">
+          <h3 class="testimonial-video-heading">Knee Replacement Journey - Ramesh Kumar</h3>
+          <p class="testimonial-video-description">
+            Ramesh shares his smooth recovery and excellent care from Surgenesis doctors after his knee replacement.
+          </p>
+        </div>
+      </div>
+
+      <!-- Video Card 2 -->
+      <div class="testimonial-video-card">
+        <iframe class="testimonial-video-frame" src="https://www.youtube.com/embed/xDi1DoMkJQo?si=x5tgV3lrr3TbMisu" allowfullscreen></iframe>
+        <div class="testimonial-video-text">
+          <h3 class="testimonial-video-heading">Safe Delivery Experience - Sunita Mehra</h3>
+          <p class="testimonial-video-description">
+            Sunita explains how her pregnancy and delivery were handled with utmost care and compassion by our gynecology team.
+          </p>
+        </div>
+      </div>
+
+      <!-- Video Card 3 -->
+      <div class="testimonial-video-card">
+        <iframe class="testimonial-video-frame" src="https://www.youtube.com/embed/1To8rUm2do8?si=rWY8t3DbLCk8lJdb" allowfullscreen></iframe>
+        <div class="testimonial-video-text">
+          <h3 class="testimonial-video-heading">Post-Surgery Recovery - Aarav Joshi</h3>
+          <p class="testimonial-video-description">
+            Aarav talks about the successful surgery he underwent and how Surgenesis Hospital supported him during rehabilitation.
+          </p>
+        </div>
+      </div>
+
+       <!-- Video Card 1 -->
+      <div class="testimonial-video-card">
+        <iframe class="testimonial-video-frame" src="https://www.youtube.com/embed/75o2_ciM0Bk?si=6QEc6JlN0xp6-mDp" allowfullscreen></iframe>
+        <div class="testimonial-video-text">
+          <h3 class="testimonial-video-heading">Knee Replacement Journey - Ramesh Kumar</h3>
+          <p class="testimonial-video-description">
+            Ramesh shares his smooth recovery and excellent care from Surgenesis doctors after his knee replacement.
+          </p>
+        </div>
+      </div>
+
+      <!-- Video Card 2 -->
+      <div class="testimonial-video-card">
+        <iframe class="testimonial-video-frame" src="https://www.youtube.com/embed/xDi1DoMkJQo?si=x5tgV3lrr3TbMisu" allowfullscreen></iframe>
+        <div class="testimonial-video-text">
+          <h3 class="testimonial-video-heading">Safe Delivery Experience - Sunita Mehra</h3>
+          <p class="testimonial-video-description">
+            Sunita explains how her pregnancy and delivery were handled with utmost care and compassion by our gynecology team.
+          </p>
+        </div>
+      </div>
+
+      <!-- Video Card 3 -->
+      <div class="testimonial-video-card">
+        <iframe class="testimonial-video-frame" src="https://www.youtube.com/embed/1To8rUm2do8?si=rWY8t3DbLCk8lJdb" allowfullscreen></iframe>
+        <div class="testimonial-video-text">
+          <h3 class="testimonial-video-heading">Post-Surgery Recovery - Aarav Joshi</h3>
+          <p class="testimonial-video-description">
+            Aarav talks about the successful surgery he underwent and how Surgenesis Hospital supported him during rehabilitation.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <%- include("partial/footer") %>
+
+</body>
+</html>

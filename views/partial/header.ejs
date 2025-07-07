@@ -1,0 +1,95 @@
+<header class="main-header">
+  <div class="header-container">
+    <a href="/" class="logo-box">
+      <img src="/images/hbg.png" alt="Hospital Logo" class="logo-img">
+    </a>
+
+    <nav class="main-nav">
+      <div class="dropdown">
+        <button class="drop-btn">About Us</button>
+        <div class="drop-menu">
+          <a href="/aboutck">Surgenesis Hospital</a>
+          <a href="/leader">Leadership Message</a>
+          <a href="#">Career</a>
+          <a href="#">Events & Activities</a>
+          <a href="/pt">Testimonials</a>
+
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="drop-btn">Services</button>
+        <div class="drop-menu">
+          <a href="/ortho">Orthopedic Surgery</a>
+          <a href="/hand">Hand Micro Surgery</a>
+          <a href="/plastic">Plastic Surgery</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="drop-btn">Doctors</button>
+        <div class="drop-menu">
+          <a href="/doctor">Dr. Amit Mittal</a>
+          <a href="/doctor1">Dr. Vivek Mittal</a>
+        </div>
+      </div>
+      <a href="/blogpage" class="nav-link" style="text-decoration: none;">Blogs</a> 
+
+      <a href="/contact" class="nav-link" style="text-decoration: none;">Contact</a>
+    </nav>
+
+    <div class="call-buttons">
+      <a href="/contact" class="btn red">Call: 9079888679</a>
+      <a href="/contact" class="btn blue">Emergency: 907988869</a>
+    </div>
+  </div>
+
+
+  <!-- Hamburger Button (Mobile Only) -->
+<button class="hamburger" onclick="toggleMobileNav()">
+  <i class="fa-solid fa-bars"></i>
+</button>
+
+<!-- Mobile Nav Panel -->
+<div class="mobile-nav-panel" id="mobileNav">
+  <div class="close-mobile-nav" onclick="toggleMobileNav()">
+    <i class="fa-solid fa-xmark"></i>
+  </div>
+
+  <div class="mobile-nav-links">
+    <div class="mobile-dropdown">
+      <span onclick="toggleDropdown(this)">About Us</span>
+      <div class="mobile-drop-menu">
+        <a href="/aboutck">Surgenesis Hospital</a>
+        <a href="#">Leadership Message</a>
+        <a href="#">Career</a>
+        <a href="#">Events & Activities</a>
+        <a href="#">Patient Testimonials</a>
+      </div>
+    </div>
+
+    <div class="mobile-dropdown">
+      <span onclick="toggleDropdown(this)">Services</span>
+      <div class="mobile-drop-menu">
+        <a href="/ortho">Orthopedic Surgery</a>
+        <a href="/hand">Hand Micro Surgery</a>
+        <a href="#">Plastic Surgery</a>
+      </div>
+    </div>
+
+    <div class="mobile-dropdown">
+      <span onclick="toggleDropdown(this)">Doctors</span>
+      <div class="mobile-drop-menu">
+        <a href="/doctor">Dr. Amit Mittal</a>
+        <a href="/doctor1">Dr. Vivek Mittal</a>
+      </div>
+    </div>
+    
+    <a href="/blogpage" class="nav-link">BLogs</a>
+    <a href="/contact" class="nav-link">Contact</a>
+    <a href="/contact" class="btn red">Call: 9079888679</a>
+    <a href="/contact" class="btn blue">Emergency: 907988869</a>
+  </div>
+</div>
+
+</header>

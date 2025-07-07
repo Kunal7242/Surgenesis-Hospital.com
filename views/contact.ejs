@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Surgenesis Hospital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/style2.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/ortho.css">
+  <style>
+   
+    .contact-section {
+  padding: 40px;
+  background-color: #f8fbff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contact-section h2 {
+  text-align: center;
+  color: #003865;
+  margin-bottom: 30px;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.contact-form {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: #003865;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.map-container {
+  flex: 1 1 400px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: #003865 solid 3px;
+}
+body{
+  background-color: #f4faff;
+}
+.vector{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+  </style>
+</head>
+<body>
+
+      <%- include("partial/header") %>
+
+
+
+      <section class="ortho-banner" style="padding-top: 0px;padding-bottom:0%">
+    <div class="ortho-banner-style">
+     <div class="ortho-banner-heading" style="width: 100%; display:flex;flex-wrap:wrap;margin-left:10%;">
+       <div style="padding-left: 40%;">
+        <h1 style="font-size:59px;padding-top: 80px;margin-bottom:20px;">Have <span style="color: #bd1e1e;">Questions </span> ?</h1>
+        <h1 style="margin-top:0%;">We are here for you..</h1>
+       </div>
+       <div><img class="vector" style="width: 500px;" src="/images/Depression_treatment___frustration_management_-removebg-preview.png" alt="vector image"></div>
+    <!-- <p style="font-size: 18px;">Expert treatment for bones, joints, muscles and spine using advanced technologies and proven techniques.</p> -->
+    <!-- <a href="/contact" class="cta-button">Book Appointment</a> -->
+     </div>
+    </div>
+   
+  </section>
+
+  <section class="contact-section">
+  <h2 style="font-size:32px; margin-bottom:60px"><i style="margin-right: 20px;color:#bd1e1e" class="fa-solid fa-headset"></i>Contact Us</h2>
+  <div class="contact-content">
+    <form action="/submit" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="number" placeholder="Mobile Number" required />
+      <!-- <input type="text" name="location" placeholder="Your Location" required /> -->
+      <textarea name="suggestion" placeholder="Your Suggestion"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="map-container">
+      <!-- Replace src with your hospital's exact location from Google Maps -->
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d874.2770462460986!2d75.74446269052837!3d26.89597673000335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db55461487f2f%3A0xac4e29387cc74378!2sSurgenesis%20Superspeciality%20Hospital%20%7C%20Hand%2C%20Cosmetic%2C%20ICU-Critical%20Care!5e0!3m2!1sen!2sin!4v1751872233940!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+    <%- include("partial/footer") %>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    gsap.from(".contact-wrapper", {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power3.out"
+    });
+
+    gsap.from("form input, form textarea, form button", {
+      opacity: 0,
+      y: 20,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power2.out"
+    });
+
+     document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank You.");
+    });
+  </script>
+<script>
+  /* Selection bar  */
+function toggleDropdown1(){
+  const dropdown = document.getElementById('dropdown');
+  const check =document.getElementById('check2');
+
+
+window.onclick = function (e) {
+  if (!e.target.closest('.multi-select-box')) {
+    check.checked=false
+  }
+}};
+
+function toggleDropdown3(){
+  const dropdown = document.getElementById('dropdown');
+  const check =document.getElementById('check4');
+
+
+window.onclick = function (e) {
+  if (!e.target.closest('.multi-select-box')) {
+    check.checked=false
+  }
+}};
+
+function toggleDropdown2(){
+  const dropdown = document.getElementById('dropdown');
+  const check =document.getElementById('check3');
+
+
+window.onclick = function (e) {
+  if (!e.target.closest('.multi-select-box')) {
+    check.checked=false
+  }
+}};
+
+
+function toggleDropdown5(){
+  const dropdown = document.getElementById('dropdown');
+  const check =document.getElementById('check5');
+
+
+window.onclick = function (e) {
+  if (!e.target.closest('.multi-select-box')) {
+    check.checked=false
+  }
+}};
+
+  
+
+</script>
+
+
+</body>
+</html>

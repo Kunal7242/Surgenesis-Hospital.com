@@ -1,0 +1,97 @@
+  body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f8fa;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-image {
+      flex: 1 1 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+    }
+
+    .contact-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .contact-form {
+      flex: 1 1 350px;
+      padding: 30px 20px;
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      color: #BD110F;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .submit-btn {
+      background-color: #BD110F;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #a20f0d;
+    }
+
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        flex-direction: column;
+        margin: 20px;
+      }
+
+      .contact-form {
+        padding: 20px 10px;
+      }
+
+      .contact-image {
+        padding: 10px;
+      }
+    }
+
+
+   
