@@ -187,20 +187,28 @@
     <% }) %>
   </div>
 
-  <% if (user && user.role === 'doctor') { %>
-    <form class="add-blog-form1" action="/blogpage/add" method="POST" enctype="multipart/form-data">
-      <input type="text" name="title" placeholder="Title" required>
-      <input type="text" name="summary" placeholder="Short Summary" required>
-      <input type="file" name="image" accept="image/*" required>
-      <textarea name="description" rows="6" placeholder="Full Blog Content" required></textarea>
-      <button type="submit">Add Blog</button>
-    </form>
-  <% } %>
-  
 </div>
 
 
 </div>
+  <div class="btn-add">
+<% if (user && user.role === 'doctor') { %>
+  <div class="popup-form-overlay" id="popupFormOverlay">
+    <div class="popup-form-box">
+      <span class="close-popup" onclick="togglePopupForm()">&times;</span>
+      <form action="/blog/add" method="POST" id="blogForm" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="Blog Title" required>
+        <textarea name="summary" placeholder="Short Summary" required></textarea>
+        <input type="file" name="image" accept="image/*" required>
+        <textarea name="description" placeholder="Full blog content"  class="rich-editor" ></textarea>
+        <!-- <textarea name="points" placeholder="Enter bullet points, one per line"></textarea> -->
+        
+        <button type="submit">Add Blog</button>
+      </form>
+    </div>
+  </div>
+  <button onclick="togglePopupForm()" style="position: absolute; top:230px; left:320px">+ Add Blog</button>
+<% } %></div>
 
 <div id="doctorLoginPopup" class="popup-form-overlay" style="display: none;">
     <div class="popup-form-box">

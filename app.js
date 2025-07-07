@@ -170,7 +170,7 @@ app.post('/blog/add', upload.single('image'), async (req, res) => {
   });
 
   await newBlog.save();
-  res.redirect('/?msg=added');
+  res.redirect('/blogpage?msg=added');
 });
 
 
