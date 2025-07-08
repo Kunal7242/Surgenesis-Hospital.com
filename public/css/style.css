@@ -2680,7 +2680,7 @@ html{
   display: none;
 }
 .heading-div {
-  transform: translateX(-100px);
+  transform: translateX(-90px);
 }
 .heading-div h1 span{
   display: inline;
@@ -2690,5 +2690,12 @@ html{
   /* flex-wrap: wrap; */
   flex-direction: row;
   gap: 10px;
+}
+.expert-vector-box{
+  /* padding-left: 0px; */
+  transform: translateX(-5px);
+}
+.d-contain{
+  transform: translateX(-10px);
 }
 }

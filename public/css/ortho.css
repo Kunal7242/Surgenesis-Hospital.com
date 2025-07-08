@@ -393,4 +393,18 @@
  .hero-banner{
   padding-bottom: 0px;
  }
+   .treat-img{
+    display: none;
+  }
+  .ortho-about{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .treat p{
+    width: 352px;
+    margin-bottom: 0px;
+  }
+  .treat{
+    width: 100%;
+  }
 }
