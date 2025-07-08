@@ -8,16 +8,14 @@ const multer = require('multer');
 const session = require('express-session');
 // const blogRoutes = require('./models/blog');
 
-require('dotenv').config();
 
 
 const app = express();
 const PORT = process.env.PORT || 8080;
-mongoose.connect(process.env.MONGO_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
 
+mongoose.connect('mongodb://127.0.0.1:27017/surgenesis_hospital')
+  .then(() => console.log('✅ MongoDB connected'))
+  .catch(err => console.log('❌ DB Error:', err));
 
 // Inline Mongoose Schema + Model
 const userSchema = new mongoose.Schema({
@@ -153,6 +151,7 @@ app.get('/ortho', (req, res) => {
 app.get('/aboutck',(req,res)=>{
   res.render('aboutck');
 })
+require('dotenv').config();
 
 
 
