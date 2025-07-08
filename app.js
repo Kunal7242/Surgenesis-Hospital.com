@@ -8,6 +8,7 @@ const multer = require('multer');
 const session = require('express-session');
 // const blogRoutes = require('./models/blog');
 
+require('dotenv').config();
 
 
 const app = express();
@@ -76,7 +77,7 @@ app.use(session({
 // Inject session user into EJS globally
 app.use((req, res, next) => {
      res.locals.user = req.session.user || null;
-  next();
+     next();
 });
 
 
@@ -193,8 +194,8 @@ app.post('/submit', async (req, res) => {
     let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'kunal72427242@gmail.com',
-        pass: 'trsbqhpugkiraisw'
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
       }
     });
 
