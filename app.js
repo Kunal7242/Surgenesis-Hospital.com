@@ -153,25 +153,30 @@ app.get('/aboutck',(req,res)=>{
 })
 
 
-
 // Add Blog
 app.post('/blog/add', upload.single('image'), async (req, res) => {
-  const { title, summary, description } = req.body;
-  const image = req.file ? `/uploads/${req.file.filename}` : '';
+  try {
+    console.log("🟢 BODY:", req.body);
+    console.log("🟢 FILE:", req.file);
 
-  // const bulletPoints = points ? points.split('\n').map(p => p.trim()).filter(p => p) : [];
+    const { title, summary, description } = req.body;
+    const image = req.file ? `/uploads/${req.file.filename}` : '';
 
-  const newBlog = new Blog({
-    title,
-    summary,
-    description,
-    image,
-    // points:points.split('\n').map(p => p.trim())
-  });
+    const newBlog = new Blog({
+      title,
+      summary,
+      description,
+      image
+    });
 
-  await newBlog.save();
-  res.redirect('/blogpage?msg=added');
+    await newBlog.save();
+    res.redirect('/blogpage?msg=added');
+  } catch (err) {
+    console.error("🔥 Blog Save Error:", err);
+    res.status(500).send("Internal Server Error: " + err.message);
+  }
 });
+
 
 
 // Delete Blog
