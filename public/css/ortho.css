@@ -323,6 +323,10 @@
     max-width: 100%;
     height: auto;
   }
+  .choose{
+    display: none;
+  }
+
 
   @media (max-width: 768px) {
     .hero-banner-content {
@@ -345,5 +349,48 @@
     .hero-banner-actions a {
       margin: 10px 5px;
     }
+      .choose{
+    display: inline;
+    position: absolute;
+    left: 8%;
+    font-size: 28px;
+    /* transform: translate(90px); */
+    transform: translateY(-90px);
+    /* transform: translateX(10px); */
+    
+  }
+  .hospital-network-cards{
+    transform: translateY(-20px);
+  }
+  .hospital-network-left h2{
+    color: #bd1e1e;
+    margin-top:69px;font-size: 28px;
+  }
+    .ortho-about::after{
+    right:5px;
+    z-index: -5;
+  }
   }
 
+@media screen and (max-width:425px) {
+  .sgns-work2mate{
+    display: none;
+  }
+  .sgns-testimonial-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .choose{
+    display: inline;
+    position: absolute;
+    left: 8%;
+    font-size: 26px;
+    /* transform: translate(90px); */
+    transform: translateY(-60px);
+    /* transform: translateX(10px); */
+  }
+ .hero-banner{
+  padding-bottom: 0px;
+ }
+}

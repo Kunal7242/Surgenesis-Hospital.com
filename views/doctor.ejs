@@ -157,6 +157,17 @@
       popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
     }
   </script>
+  <script>
+  function toggleMobileNav() {
+    const panel = document.getElementById('mobileNav');
+    panel.classList.toggle('active');
+  }
+
+  function toggleDropdown(trigger) {
+    trigger.parentElement.classList.toggle('active');
+  }
+</script>
+
 </body>
 
 </html>

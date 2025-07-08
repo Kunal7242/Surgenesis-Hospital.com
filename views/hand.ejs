@@ -48,7 +48,7 @@
   <div class="hospital-network-left" >
     <h2 style="color: white; margin-top:69px;font-size: 28px;">What We Treat</h2>
     <p style="font-size:18px; line-height:22px">Our orthopedic team handles fractures, joint pain, arthritis, ligament tears, spinal disorders, and pediatric ortho issues. We use advanced diagnostics and surgical techniques for the best outcomes.</p>
-    <a href="/contact" class="hospital-btn">Find Hospital Near You</a>
+    <!-- <a href="/contact" class="hospital-btn">Find Hospital Near You</a> -->
   </div>
 
   <div class="hospital-network-cards">
@@ -97,6 +97,8 @@
     <img src="/images/doctorr-removebg-preview.png" alt="">
     
   </div>
+    <h2 class="choose">Why choose Surgenesis</h2>
+
     <div class="sgns-testimonial-cards" id="testimonialSlider">
       <!-- Card 1 -->
        
@@ -216,6 +218,17 @@
     ease: "sine.inOut"
   });
 </script>
+<script>
+  function toggleMobileNav() {
+    const panel = document.getElementById('mobileNav');
+    panel.classList.toggle('active');
+  }
+
+  function toggleDropdown(trigger) {
+    trigger.parentElement.classList.toggle('active');
+  }
+</script>
+
 
 </body>
 

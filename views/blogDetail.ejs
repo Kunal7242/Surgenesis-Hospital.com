@@ -188,5 +188,16 @@
     <a href="/blogpage" class="back-btn">← Back to Home</a>
   </div>
   <%- include("partial/footer") %>
+  <script>
+  function toggleMobileNav() {
+    const panel = document.getElementById('mobileNav');
+    panel.classList.toggle('active');
+  }
+
+  function toggleDropdown(trigger) {
+    trigger.parentElement.classList.toggle('active');
+  }
+</script>
+
 </body>
 </html>

@@ -2532,3 +2532,163 @@ html{
 }
 
 
+@media (max-width: 425px) {
+  .expert-container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .expert-vector-box {
+    width: 100%;
+    text-align: center;
+    margin-left: -15px;
+  }
+
+  .expert-vector-img {
+    width: 80%;
+    height: auto;
+  }
+
+  .expert-doctor-cards {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .expert-heading {
+    font-size: 1.5rem;
+  }
+
+  .expert-subtext {
+    font-size: 1rem;
+  }
+
+  .d-contain {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .expert-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .expert-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .expert-info {
+    padding: 10px;
+  }
+
+  .expert-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .call-btn,
+  .appoint-btn {
+    width: 100%;
+  }
+}
+
+
+@media  screen and (max-width:768px) {
+   .vector-doctor{
+    display: none;
+   }
+   /* .sgns-testimonial-section{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+   } */
+   .sgns-testimonial-left{
+    display: none;
+   }
+   .sgns-testimonial-card{
+    margin-left: 12px;
+   }
+   .sgns-testimonial-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+
+    /* margin-right: 25px; */
+   }
+   #testimonialSlider.sgns-testimonial-cards{
+    margin-left: -10px;
+   }
+   .doc-blog-nav.next{
+    left: 730px;
+   }
+   .img img{
+    width: 350px;
+    top: 32%;
+   }
+}
+
+@media  screen and (max-width:425px) {
+  .sgns-work2mate{
+    margin-left: 0px;
+  }
+  .scroll-btn{
+    left: 10%;
+  }
+  .sgns-testimonial-cards{
+    gap: 24px;
+
+  }
+  .sgns-work2{
+    gap:30px;
+    display:flex;
+    flex-direction: column;
+  }
+  .treat-img img{
+    display: none;
+  }
+    .ortho-about::after{
+    right:50px;
+    z-index: -5;
+  }
+  .treat{
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+.treat-wrap{
+  display: flex;
+  padding:0px;
+  margin: 0px;
+  transform: translateX(-40px);
+}
+.footer-links h4{
+  color: white;
+  font-size: 16px;
+}
+.footer-logo-section h2{
+  font-size: 24px;
+}
+.hero-banner-image{
+  display: none;
+}
+.ortho-banner-style{
+  transform: translateX(-50px);
+}
+.img img{
+  display: none;
+}
+.heading-div {
+  transform: translateX(-100px);
+}
+.heading-div h1 span{
+  display: inline;
+}
+.heading-question{
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  gap: 10px;
+}
+}

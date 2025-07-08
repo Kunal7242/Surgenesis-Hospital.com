@@ -13,11 +13,9 @@ const session = require('express-session');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-
+mongoose.connect('mongodb://127.0.0.1:27017/surgenesis_hospital')
+  .then(() => console.log('✅ MongoDB connected'))
+  .catch(err => console.log('❌ DB Error:', err));
 
 // Inline Mongoose Schema + Model
 const userSchema = new mongoose.Schema({
@@ -155,30 +153,25 @@ app.get('/aboutck',(req,res)=>{
 })
 
 
+
 // Add Blog
 app.post('/blog/add', upload.single('image'), async (req, res) => {
-  try {
-    console.log("🟢 BODY:", req.body);
-    console.log("🟢 FILE:", req.file);
+  const { title, summary, description } = req.body;
+  const image = req.file ? `/uploads/${req.file.filename}` : '';
 
-    const { title, summary, description } = req.body;
-    const image = req.file ? `/uploads/${req.file.filename}` : '';
+  // const bulletPoints = points ? points.split('\n').map(p => p.trim()).filter(p => p) : [];
 
-    const newBlog = new Blog({
-      title,
-      summary,
-      description,
-      image
-    });
+  const newBlog = new Blog({
+    title,
+    summary,
+    description,
+    image,
+    // points:points.split('\n').map(p => p.trim())
+  });
 
-    await newBlog.save();
-    res.redirect('/blogpage?msg=added');
-  } catch (err) {
-    console.error("🔥 Blog Save Error:", err);
-    res.status(500).send("Internal Server Error: " + err.message);
-  }
+  await newBlog.save();
+  res.redirect('/blogpage?msg=added');
 });
-
 
 
 // Delete Blog

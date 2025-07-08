@@ -76,6 +76,12 @@ body{
   top: 0%;
   left: 0%;
 }
+.img{
+  max-width: 500px;
+}
+.heading-div{
+ padding-left: 40%;
+}
 
   </style>
 </head>
@@ -88,11 +94,11 @@ body{
       <section class="ortho-banner" style="padding-top: 0px;padding-bottom:0%">
     <div class="ortho-banner-style">
      <div class="ortho-banner-heading" style="width: 100%; display:flex;flex-wrap:wrap;margin-left:10%;">
-       <div style="padding-left: 40%;">
-        <h1 style="font-size:59px;padding-top: 80px;margin-bottom:20px;">Have <span style="color: #bd1e1e;">Questions </span> ?</h1>
+       <div class="heading-div">
+        <h1 style="font-size:59px;padding-top: 80px;margin-bottom:20px;">Have <div class="heading-question"><span style="color: #bd1e1e;">Questions </span> ?</div></h1>
         <h1 style="margin-top:0%;">We are here for you..</h1>
        </div>
-       <div><img class="vector" style="width: 500px;" src="/images/Depression_treatment___frustration_management_-removebg-preview.png" alt="vector image"></div>
+       <div class="img"><img class="vector"  src="/images/Depression_treatment___frustration_management_-removebg-preview.png" alt="vector image"></div>
     <!-- <p style="font-size: 18px;">Expert treatment for bones, joints, muscles and spine using advanced technologies and proven techniques.</p> -->
     <!-- <a href="/contact" class="cta-button">Book Appointment</a> -->
      </div>
@@ -194,6 +200,16 @@ window.onclick = function (e) {
 
 </script>
 
+<script>
+  function toggleMobileNav() {
+    const panel = document.getElementById('mobileNav');
+    panel.classList.toggle('active');
+  }
+
+  function toggleDropdown(trigger) {
+    trigger.parentElement.classList.toggle('active');
+  }
+</script>
 
 </body>
 </html>

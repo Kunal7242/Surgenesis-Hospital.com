@@ -186,6 +186,17 @@ window.onclick = function (e) {
 }};
 
 </script>
+<script>
+  function toggleMobileNav() {
+    const panel = document.getElementById('mobileNav');
+    panel.classList.toggle('active');
+  }
+
+  function toggleDropdown(trigger) {
+    trigger.parentElement.classList.toggle('active');
+  }
+</script>
+
 
 </body>
 
