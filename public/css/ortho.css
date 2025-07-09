@@ -408,3 +408,17 @@
     width: 100%;
   }
 }
+@media screen and (max-width:375px) {
+    .treat{
+      margin-right: 60px;
+      width: 80%;
+    }
+    .treat p{
+      margin-right: 10px;
+      padding-right: 30px;
+      width: 310px;
+    }
+    /* .treat-wrap{
+      margin-right: 49px;
+    } */
+}

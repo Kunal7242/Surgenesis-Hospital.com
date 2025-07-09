@@ -43,6 +43,7 @@
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 16px;
+  max-width:  642px;
 }
 
 .contact-form button {
@@ -110,11 +111,11 @@ body{
   <h2 style="font-size:32px; margin-bottom:60px"><i style="margin-right: 20px;color:#bd1e1e" class="fa-solid fa-headset"></i>Contact Us</h2>
   <div class="contact-content">
     <form action="/submit" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="text" name="number" placeholder="Mobile Number" required />
+      <input class="contect-info" type="text" name="name" placeholder="Your Name" required />
+      <input class="contect-info" type="email" name="email" placeholder="Your Email" required />
+      <input class="contect-info" type="text" name="number" placeholder="Mobile Number" required />
       <!-- <input type="text" name="location" placeholder="Your Location" required /> -->
-      <textarea name="suggestion" placeholder="Your Suggestion"></textarea>
+      <textarea class="contect-info" name="suggestion" placeholder="Your Suggestion"></textarea>
       <button type="submit">Send Message</button>
     </form>
 

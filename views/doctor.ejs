@@ -31,13 +31,6 @@
       margin-right: 30px;
     }
 
-    .doctor-card img {
-      width: 130px;
-      height: 145px;
-      border-radius: 12px;
-      object-fit: cover;
-    }
-
     .doctor-info {
       margin-left: 24px;
     }
@@ -126,14 +119,14 @@
 
   <div class="doctor-container">
     <div class="doctor-card">
-      <div style="display: flex; align-items: flex-start;">
-        <img src="/images/dd1.jpg" alt="Dr. Vivek Mittal">
-        <div class="doctor-info" style="display: flex;flex-direction:row">
+      <div class="img-text" style="display: flex; align-items: flex-start;">
+        <img class="img-dd" src="/images/dd1.jpg" alt="Dr. Vivek Mittal">
+        <div class="doctor-info" >
           <div style="line-height: 28px;"><h1>Dr. Amit Mittal</h1>
           <h2 style="display:flex;flex:inline-left;">Senior Consultant</h2>
-          <h2 style="display:flex;flex:inline-left;"><strong>Department:</strong>MBBS, DNB, FNB</h2>
+          <h2 style="display:flex;flex:inline-left;"><strong>Department:</strong><p style="display: flex;flex-direction:row;margin:0px;padding-left:2px">MBBS, DNB, FNB</p></h2>
           <h2 style="display:flex;flex:inline-left;"><strong>Experience:</strong> 22 Years</h2></div>
-          <div style="display: flex;flex-direction:column;padding-left:69px"><p style="margin-top: 10px;margin-bottom:6px"><i class="fa-solid fa-phone" style="color:#BD1E1E; margin-right: 10px;"></i><strong>For Appointment</strong></p><p style="padding-left:26px; margin:5px 0;">9079888679</p></div>
+          <div class="dr-btn"><p style="margin-top: 10px;margin-bottom:6px"><i class="fa-solid fa-phone" style="color:#BD1E1E; margin-right: 10px;"></i><strong>For Appointment</strong></p><p style="padding-left: 5px;padding-top:5px;">9079888679</p></div>
         </div>
       </div>
 
@@ -145,7 +138,7 @@
     </div>
 
     <div class="appointment-section">
-      <button onclick="togglePopup3()" class="booknow"><a href="/contact" style="background-color: transparent; text-decoration:none">Book an Appointment <i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i></a></button>
+      <button onclick="togglePopup3()" class="booknow"><a href="/contact" style="background-color: transparent;color:white; text-decoration:none">Book an Appointment <i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i></a></button>
     </div>
   </div>
 

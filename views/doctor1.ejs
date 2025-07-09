@@ -33,13 +33,6 @@
       margin-right: 30px;
     }
 
-    .doctor-card img {
-      width: 130px;
-      height: 145px;
-      border-radius: 12px;
-      object-fit: cover;
-    }
-
     .doctor-info {
       margin-left: 24px;
     }
@@ -128,14 +121,14 @@
 
   <div class="doctor-container">
     <div class="doctor-card">
-      <div style="display: flex; align-items: flex-start;">
-        <img src="/images/dd2.jpg" alt="Dr. Vivek Mittal">
-        <div class="doctor-info" style="display: flex;flex-direction:row">
+      <div class="img-text">
+        <img class="img-dd" src="/images/dd2.jpg" alt="Dr. Vivek Mittal">
+        <div class="doctor-info" >
           <div style="line-height: 28px;"><h1>Dr. Vivek Mittal</h1>
           <h2 style="display:flex;flex:inline-left;">Senior Consultant</h2>
-          <h2 style="display:flex;flex:inline-left;"><strong>Department:</strong>&thinsp;Critical Care Specialist</h2>
-          <h2 style="display:flex;flex:inline-left;"><strong>Experience:</strong>&thinsp; 22 Years</h2></div>
-          <div style="display: flex;flex-direction:column; padding-left:70px"><p style="margin-top: 10px;margin-bottom:6px"><i class="fa-solid fa-phone" style="color:#BD1E1E; margin-right: 10px;"></i><strong>For Appointment</strong></p><p style="padding-left:26px; margin:5px 0;">9079888679</p></div>
+          <h2 style="display:flex;flex:inline-left;"><strong style="padding-right: 2px;">Department:</strong><p style="margin: 0;display:flex;flex-direction:row">Critical Care </p></h2>
+          <h2 style="display:flex;flex:inline-left;"><strong style="margin-right:4px;">Experience:</strong>22 Years</h2></div>
+          <div class="dr-btn"><p style="margin-top: 10px;margin-bottom:6px"><i class="fa-solid fa-phone" style="color:#BD1E1E; margin-right: 10px;"></i><strong>For Appointment</strong></p><p style="padding-left:25px;padding-top:5px; margin:5px 0;">9079888679</p></div>
         </div>
       </div>
 
@@ -144,22 +137,11 @@
         <p>Dr. Amit Mittal is an orthopedic and hand surgeon practicing in Jaipur, Rajasthan. He is known for his <strong>expertise</strong> in hand and <strong>microsurgery</strong>, including treatment of brachial plexus injuries, congenital anomalies, and spastic hand management. He is associated with <strong>Surgenesis Hospital</strong> and Mittal Hand Microsurgery Centre in Jaipur.</p>
         <p>He has managed major degloving injuries of upper and lower limb including pediatric patient successfully. He got <strong>2nd rank in Diplomat National</strong> board in Hand and Microsurgery-2012 [DNB-FNB].</p>
       </div>
-    <div class="multi-select-box" style="display: inline-block;">
-      <input type="checkbox" id="check5" style="display: none;">
-      <div  style="width: 750px;height:22px;border:solid 1px green ; padding-left:22px; border-radius:7px ;padding-top:7px; display:flex; justify-content:space-between" >
-        <label for="check5" onclick="toggleDropdown5()" style="cursor: pointer; color: #003865;">
-          Education<i class="fas fa-chevron-down" style="font-size: 12px; padding-left:660px;"></i>
-        </label>
-      </div>
-      <div class="dropdown-options1" id="dropdown" style="  background-color: #9e8585; border: 1px solid #436d94;width:753px; position:relative;box-shadow:0;">
-        <div class="option1">MBBS</div>
-        <div class="option1"></div>
-      </div>
-    </div>
+   
     </div>
 
     <div class="appointment-section">
-      <button onclick="togglePopup3()" class="booknow"><a href="/contact" style="background-color: transparent; text-decoration:none">Book an Appointment <i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i></a></button>
+      <button onclick="togglePopup3()" class="booknow"><a href="/contact" style="background-color: transparent;color:white; text-decoration:none">Book an Appointment <i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i></a></button>
     </div>
   </div>
 

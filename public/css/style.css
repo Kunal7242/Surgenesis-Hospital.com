@@ -2479,6 +2479,10 @@ body{
   font-weight: 600;
   font-size: 16px;
 }
+.doctor-info{
+  display: flex;flex-direction:row
+}
+
 @media (max-width: 768px) {
   .sgns-testimonial-section {
     flex-direction: column;
@@ -2531,7 +2535,22 @@ html{
   overflow-x: hidden;
 }
 
+.dr-btn{
+   display: flex;flex-direction:column;padding-left:69px
+}
 
+.dr-btn p{
+  padding-left:26px; margin:5px 0;
+}
+.doctor-info{
+  transform: translateX(-15px);
+}
+.img-dd {
+      width: 130px;
+      height: 145px;
+      border-radius: 12px;
+      object-fit: cover;
+}
 @media (max-width: 425px) {
   .expert-container {
     flex-direction: column;
@@ -2624,10 +2643,6 @@ html{
    .doc-blog-nav.next{
     left: 730px;
    }
-   .img img{
-    width: 350px;
-    top: 32%;
-   }
 }
 
 @media  screen and (max-width:425px) {
@@ -2640,6 +2655,41 @@ html{
   .sgns-testimonial-cards{
     gap: 24px;
 
+  }
+  .about-section{
+    max-width: 100vw;
+  }
+  .about-section p{
+    width: 350px;
+  }
+  .img-text{
+   width: 392px; 
+   display: flex;
+   flex-direction: row;
+}
+.img-dd{
+  width: 110px;
+}
+  .doctor-info{
+    display: flex;
+    flex-direction: column;
+ 
+  }
+  .appointment-section{
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+  }
+  .dr-btn{
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+  }
+  .dr-btn p{
+    padding-left: 0px;
+  }
+  .doctor-container{
+    padding-left: 10px;
   }
   .sgns-work2{
     gap:30px;
@@ -2698,4 +2748,14 @@ html{
 .d-contain{
   transform: translateX(-10px);
 }
-}
+ .contect-form button{
+    width: 351px
+  }
+  .contect-section{
+    padding-right: 10px
+  }
+  .doctor-container{
+    display: flex;
+    flex-direction: column
+  }
+};
